@@ -12,4 +12,5 @@ def build_poly(x, degree):
     # this function should return the matrix formed
     # by applying the polynomial basis to the input data
     # ***************************************************
-    raise NotImplementedError
+    x = np.reshape(x, (-1, 1))
+    return np.hstack([x**j for j in range (0, degree+1)])
